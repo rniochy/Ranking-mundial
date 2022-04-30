@@ -41,7 +41,7 @@ export default function Home({countries}) {
 }
 
 export const getStaticProps = async () => {
-        const res = await fetch('https://restcountries.eu/rest/v2/all');
+        const res = await fetch(process.env.URLALL);
         const countries = await res.json();
 
         return {
